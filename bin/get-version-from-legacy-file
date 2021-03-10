@@ -2,9 +2,9 @@
 
 get_legacy_version() {
     local -r current_directory="$1"
-    local -r tf_version_file="${current_directory}/.terraform-version"
+    local -r tf_version_file="${current_directory}/.tfswitchrc"
 
-    # Get version from .terraform-version file (used by tfenv)
+    # Get version from .tfswitchrc file (used by tfswitch)
     if [[ -r ${tf_version_file} ]]; then
         cat "${tf_version_file}"
     fi
